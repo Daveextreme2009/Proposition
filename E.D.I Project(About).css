@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com');
+
+body{
+    background-color: black;
+    height: 300vh;
+}
+
+.top-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+nav {
+    margin-left: 15cm;
+}
+
+nav a {
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 100px;
+    text-decoration: none;
+    color: blue;
+}
+
+nav a::after{
+    content: '';
+    background-color: aqua;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 21px;
+    left: -0px;
+    transform-origin: right;
+    transition: 1s;
+}
+
+nav .not-it::after{
+    content: '';
+    background-color: aqua;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 21px;
+    left: -0px;
+    transform: scale(0);
+    transform-origin: right;
+    transition: 1s;
+}
+
+nav .not-it:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.introduction{
+    position: relative;
+    width: 600px;
+    height: 598px;
+    margin-top: 12cm;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.introduction::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 598px;
+    background: linear-gradient(0deg, transparent, transparent, blue, blue, blue);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.introduction::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 598px;
+    background: linear-gradient(0deg, transparent, transparent, blue, blue, blue);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.introduction .reel {
+    position: relative;
+    inset: 4px;
+    width: 511px;
+    height: 490px;
+    background: aqua;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-light::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 598px;
+    background: linear-gradient(0deg, transparent, transparent, red, red, red);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.second-light::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 598px;
+    background: linear-gradient(0deg, transparent, transparent, red, red, red);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.text1{
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
+
+.demacation{
+    height: 4px;
+    width: 34cm;
+    margin-top: 2cm;
+    margin-left: 0.5cm;
+    border-radius: 8px;
+    background-color: aqua;
+}
+
+.explain{
+    height: 60vh;
+    width: 30vw;
+    margin-top: 2cm;
+    margin-left: 21cm;
+    background-color: transparent;
+    border: 1px solid aqua;
+    border-radius: 13px;
+}
+
+.ex2{
+    height: 30vh;
+    width: 30vw;
+    margin-top: -25px;
+    background-color: aqua;
+    border-radius: 13px 13px 0px 0px;
+}
+
+.text2{
+    color: black;
+    font-style: italic;
+    text-align: center;
+}
+
+.text3{
+    color: aqua;
+    font-style: italic;
+    text-align: center;
+    margin-top: 3.5cm;
+}
+
+.text4{
+    color: aqua;
+    text-align: center;
+    margin-top: 5cm;
+}
+

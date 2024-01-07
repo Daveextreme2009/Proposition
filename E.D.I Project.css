@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com');
+
+body{
+    background-color: black;
+    height: 200vh;
+}
+
+.top-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+nav {
+    margin-left: 15cm;
+}
+
+nav a {
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 100px;
+    text-decoration: none;
+    color: blue;
+}
+
+nav a::after{
+    content: '';
+    background-color: aqua;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 21px;
+    left: -0px;
+    transform-origin: right;
+    transition: 1s;
+}
+
+nav .not-it::after{
+    content: '';
+    background-color: aqua;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 21px;
+    left: -0px;
+    transform: scale(0);
+    transform-origin: right;
+    transition: 1s;
+}
+
+nav .not-it:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.introduction{
+    position: relative;
+    width: 600px;
+    height: 598px;
+    margin-top: 12cm;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.introduction::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 598px;
+    background: linear-gradient(0deg, transparent, transparent, blue, blue, blue);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.introduction::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 598px;
+    background: linear-gradient(0deg, transparent, transparent, blue, blue, blue);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.introduction .reel {
+    position: relative;
+    inset: 4px;
+    width: 511px;
+    height: 490px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-light::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 598px;
+    background: linear-gradient(0deg, transparent, transparent, red, red, red);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.second-light::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 600px;
+    height: 598px;
+    background: linear-gradient(0deg, transparent, transparent, red, red, red);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.content{
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: purple;
+}
+
+h1{
+    color: aqua;
+}
+
+.content2{
+    position: relative;
+    width: 205px;
+    height: 205px;
+    top: -3cm;
+    left: 4cm;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.content2::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 205px;
+    height: 205px;
+    background: linear-gradient(0deg, transparent, transparent, red, red, red);
+    z-index: 1;
+}
+
+.content2::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 205px;
+    height: 205px;
+    background: linear-gradient(0deg, transparent, transparent, blue, blue, blue);
+    z-index: 1;
+    animation-delay: -21s;
+}
+
+.content2 .reel2{
+    position: relative;
+    inset: 4px;
+    width: 116px;
+    height: 97px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.cont:hover, .cover:hover{
+    height: 105px;
+    top: 1cm;
+    .content2 .reel2{
+        position: relative;
+        inset: 4px;
+        width: 116px;
+        height: 97px;
+        background: #222;
+        padding: 50px 40px;
+        border-radius: 8px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        transition: 1s;
+    }
+    .content2::before, .content2::after{
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+    }
+    .container{
+        height: 405px;
+        width: 505px;
+        transition: 1s;
+    }
+    .container-content{
+        margin-top: 1px;
+        color: aqua;
+        transition: 1s;
+    }
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.question1{
+    font-style: italic;
+    font-weight: bold;
+    color: aqua;
+    text-align: center;
+}
+
+.cont{
+    height: 209px;
+    width: 549px;
+    margin-right: -9cm;
+    margin-top: 8cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover{
+    height: 209px;
+    width: 249px;
+    margin-bottom: -9cm;
+    margin-left: 150px;
+}
+
+.container{
+    height: 105px;
+    width: 505px;
+    background-color: #222;
+    border: 2px solid aqua;
+    border-radius: 8px;
+}
+
+.container-content{
+    color: transparent;
+    margin-top: -2cm;
+    text-align: center;
+}
+
+section{
+    margin-left: 18cm;
+    margin-top: 4cm;
+}

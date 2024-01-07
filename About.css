@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(221, 211, 193);
+  margin: 0;
+  width: 100%;
+  height: 180vh;
+}
+.navigation-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  z-index: 99;
+}
+nav a{
+  position: relative;
+  font-size: 1.1em;
+  color: red;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+nav #btn{
+  width: 120px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid red;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: red;
+  font-weight: 500;
+  margin-left: 40px;
+}
+nav #btn:hover{
+  color: blue;
+  background-color: red;
+  box-shadow: 5px 10px 10px black;
+  transition: 0.9s;
+}
+nav a::after{
+  content: '';
+  position: absolute;
+  background-color: blue;
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  bottom: -6px;
+  left: 0;
+  transition: transform .5s;
+  transform-origin: right;
+}
+.re::after{
+  content: '';
+  position: absolute;
+  background-color: blue;
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  bottom: -6px;
+  left: 0;
+  transform: scale(0);
+  transition: transform .5s;
+  transform-origin: right;
+}
+.re:hover::after{
+  transform: scale(1);
+  transform-origin: left;
+}
+.top{
+  width: 100%;
+  height: 90vh;
+  background-image: url("ser.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.se{
+  height: 80vh;
+}
+.ct{
+  height: 70vh;
+  width: 12cm;
+  backdrop-filter: blur(20px);
+  margin-left: 12cm;
+  margin-top: -8cm;
+}

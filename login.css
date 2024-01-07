@@ -1,0 +1,150 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background-image: url("ser.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  width: 90%;
+  height: 100vh;
+}
+.navigation-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  z-index: 99;
+}
+nav .re{
+  position: relative;
+  font-size: 1.1em;
+  color: red;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+nav .re::after{
+  content: '';
+  position: absolute;
+  background-color: blue;
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  bottom: -6px;
+  left: 0;
+  transform: scale(0);
+  transition: transform .5s;
+  transform-origin: right;
+}
+nav .re:hover::after{
+  transform: scale(1);
+  transform-origin: left;
+}
+nav #btn{
+  width: 120px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid red;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: red;
+  font-weight: 500;
+  margin-left: 40px;
+}
+nav #btn:hover{
+  color: blue;
+  background-color: red;
+  box-shadow: 5px 10px 10px black;
+  transition: 0.9s;
+}
+
+.top{
+  width: 35.9cm;
+  height: 90vh;
+}
+.se{
+  height: 20vh;
+}
+.ct{
+  height: 70vh;
+  width: 12cm;
+  backdrop-filter: blur(20px);
+  margin-left: 12cm;
+}
+h1{
+  text-align: center;
+  color: blue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+  margin-top: 2cm;
+  font-size: 1.1em;
+  transition: 1s;
+}
+.line-1{
+  width: 300px;
+  height: 2px;
+  border: none;
+  background-color: blue;
+  margin-bottom: -40px;
+}
+.input{
+  width: 300px;
+  transform: translateY(-10px);
+  color: aqua;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition: 1s;
+}
+.cover{
+  height: 70px;
+}
+.cover:hover{
+  p{
+    font-size: 12px;
+    transform: translateY(-10px);
+  }
+}
+.cover-2{
+  height: 70px;
+  margin-top: -80px;
+}
+.cover-2:hover{
+  p{
+    font-size: 12px;
+    transform: translateY(-10px);
+  }
+}
+.submit{
+  color: blue;
+  border: 2px solid blue;
+  background: transparent;
+  height: 50px;
+  width: 100px;
+  border-radius: 4px;
+  margin-left: 4.5cm;
+}
+.submit:hover{
+  color: red;
+  border: 2px solid blue;
+  background-color: blue;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 1s;
+}
